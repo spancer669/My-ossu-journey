@@ -1,0 +1,43 @@
+ Lecture 2 (Core Fundamentals) Exercises
+Problem 1: Expression Reality Check
+
+What is the value AND type of each?
+
+a = (13 - 4) / (12 * 12)
+b = 4 * 3
+c = 4.0 * 3
+d = int(1/2)
+
+Don’t guess. Compute mentally step by step.
+
+Problem 2: Variable Trap
+
+What are final values?
+
+x = 10
+y = x + 5
+x = 20
+
+What is y at the end?
+
+Problem 3: Swap Bug (Classic Failure)
+
+Fix this:
+
+x = 1
+y = 2
+y = x
+x = y
+
+Write the correct version
+
+Problem 4: Operator Logic
+
+What is the output?
+
+print(5//2)
+print(5/2)
+print(5%2)
+print(2**3)
+
+---
