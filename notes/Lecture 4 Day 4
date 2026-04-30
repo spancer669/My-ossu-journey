@@ -1,0 +1,332 @@
+# ** Lecture 4: Strings, Guess & Check, Binary**
+
+---
+
+# 1. break STATEMENT (Loop Escape Hatch)
+
+## What it does
+
+* Instantly exits the **current loop**
+* Skips everything after it inside the loop
+* Only exits the **innermost loop** 
+
+---
+
+## Example
+
+```python
+mysum = 0
+for i in range(5, 11, 2):
+    mysum += i
+    if mysum == 5:
+        break
+    mysum += 1
+print(mysum)
+```
+
+ Once `break` hits → loop dies immediately
+ Anything after it = ignored
+
+---
+
+## Brutal truth
+
+> break is power. Misuse it and your logic becomes invisible garbage.
+
+---
+
+# 2. LOOPS OVER STRINGS
+
+## Big Idea
+
+> for loop doesn’t just work with numbers
+> it works with **any sequence (including strings)** 
+
+---
+
+## 3 Equivalent Ways
+
+```python
+s = "demo loops - fruit loops"
+
+# 1. index-based
+for i in range(len(s)):
+    if s[i] == 'i' or s[i] == 'u':
+        print("found")
+
+# 2. direct char
+for char in s:
+    if char == 'i' or char == 'u':
+        print("found")
+
+# 3. cleanest
+for char in s:
+    if char in 'iu':
+        print("found")
+```
+ Same result, different clarity levels 
+
+---
+
+## Pattern: Unique Characters
+
+* Loop through string
+* Track seen characters
+* Count new ones only 
+
+---
+
+# 3. GUESS-AND-CHECK (Exhaustive Enumeration)
+
+## Definition
+
+* Guess solution
+* Check if correct
+* Repeat until:
+
+  * Found OR
+  * Exhausted all options 
+
+---
+
+## Mental Model
+
+> brute force with discipline
+
+---
+
+## Square Root Example
+
+```python
+guess = 0
+while guess**2 < x:
+    guess += 1
+
+if guess**2 == x:
+    print("perfect square")
+else:
+    print("not perfect")
+```
+
+ Stop condition:
+
+* Either found OR guess² > x 
+
+---
+
+## Edge Case
+
+* Negative numbers break logic → need handling 
+
+---
+
+## Big Insight
+
+> Guess-and-check cannot run forever
+> You must define a **stop boundary**.
+
+---
+
+# 4. BOOLEAN FLAGS (Silent Watchers)
+
+## Idea
+
+* Variable that tracks if something happened
+
+---
+
+## Example
+
+```python
+found = False
+
+for i in range(1,11):
+    if i == secret:
+        print("found")
+        found = True
+
+if not found:
+    print("not found")
+```
+
+`found` = signal system 
+
+---
+
+## Reality
+
+Without flags → you lose memory inside loops
+
+---
+
+# 5. GUESS-AND-CHECK APPLICATIONS
+
+## Cube Root
+
+```python
+for guess in range(abs(cube)+1):
+    if guess**3 == abs(cube):
+        if cube < 0:
+            guess = -guess
+        print(guess)
+```
+
+---
+
+## Optimization with break
+
+```python
+for guess in range(abs(cube)+1):
+    if guess**3 >= abs(cube):
+        break
+```
+
+Stops early → faster 
+
+---
+
+## Word Problem (Nested Loops)
+
+```python
+for a in range(11):
+    for b in range(11):
+        for c in range(11):
+            if a + b + c == 10:
+                if b == a-2 and c == 2*a:
+                    print(a, b, c)
+```
+
+ Works, but slow for big numbers 
+
+---
+
+## Optimized Version
+
+```python
+for a in range(1001):
+    b = max(a - 20, 0)
+    c = a * 2
+    if a + b + c == 1000:
+        print(a, b, c)
+```
+
+ Reduce dimensions → faster thinking
+
+---
+
+## Brutal Insight
+
+> More loops ≠ smarter solution
+> It often means you didn’t simplify the math.
+
+---
+
+# 6. FLOAT PROBLEM (Silent Bug Factory)
+
+## Example
+
+```python
+x = 0
+for i in range(10):
+    x += 0.1
+
+print(x == 1)   # False
+```
+
+ Why?
+
+* Floating point = approximation 
+
+---
+
+## Big Idea
+
+> Small errors accumulate into big lies
+
+---
+
+## Reality
+
+Never trust float equality blindly
+
+---
+
+# 7. BINARY (How Computers Actually Think)
+
+## Core Idea
+
+* Everything = 0s and 1s
+* Base 2 instead of base 10 
+
+---
+
+## Example
+
+Decimal:
+
+```
+1507 = 1×10³ + 5×10² + 7
+```
+
+Binary:
+
+```
+= sum of powers of 2
+```
+
+---
+
+# 8. DECIMAL → BINARY CONVERSION
+
+## Algorithm
+
+* Take remainder `% 2`
+* Divide `// 2`
+* Repeat
+* Build string backwards 
+
+---
+
+## Code
+
+```python
+result = ''
+while num > 0:
+    result = str(num % 2) + result
+    num = num // 2
+```
+
+---
+
+## Handle Negative
+
+```python
+if num < 0:
+    is_neg = True
+    num = abs(num)
+```
+
+ Add '-' later 
+
+---
+
+# FINAL SUMMARY
+
+* break → kills loop instantly
+* loops can iterate over strings
+* guess-and-check → brute force with limits
+* boolean flags → track events
+* nested loops → powerful but slow
+* optimize by reducing variables
+* floats ≠ exact
+* binary = computer language
+* decimal → binary = divide by 2 repeatedly
+
+---
+
+# One line proverb
+
+> “If you don’t control your guesses, your program becomes noise.”
+
+---
+
