@@ -1,0 +1,39 @@
+Lecture 3 (Loops Mastery)Exercises
+Problem 5: While Loop Prediction
+
+What does this code prints?
+
+n = 3
+while n > 0:
+    print(n)
+    n -= 1
+---
+
+Problem 6: Infinite Loop Detector
+
+Does this stop?
+
+n = 5
+while n > 0:
+    print(n)
+
+ If yes → explain how
+ If no → explain why
+
+---
+Problem 7: For Loop Control
+
+What prints?
+
+for i in range(1, 6, 2):
+    print(i)
+Problem 8: Accumulator Pattern
+
+What is final value of total?
+
+total = 0
+for i in range(4):
+    total += i
+
+a for loop
+a while loop (separately)
