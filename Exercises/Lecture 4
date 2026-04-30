@@ -1,0 +1,58 @@
+Lecture 4 (Thinking Like a Programmer) Exercises
+Problem 9: Guess-and-Check Logic
+
+What does this print for x = 10?
+
+guess = 0
+while guess**2 < x:
+    guess += 1
+
+if guess**2 == x:
+    print("perfect")
+else:
+    print("not perfect")
+
+---
+
+Problem 10: Boolean Flag Reality
+
+What prints?
+
+found = False
+
+for i in range(1,5):
+    if i == 10:
+        found = True
+
+if not found:
+    print("not found")
+
+---
+
+Problem 11: Break Behavior
+
+What prints?
+
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+Problem 12: Float Trap
+
+What happens?
+
+x = 0
+for i in range(10):
+    x += 0.1
+
+print(x == 1)
+
+Explain why, not just result.
+
+Problem 13: Binary Thinking
+
+Convert manually:
+
+Decimal: 10 → Binary = ?
+
+No calculator. Use divide-by-2 logic.
