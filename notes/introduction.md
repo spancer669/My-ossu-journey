@@ -1,36 +1,72 @@
-# OSSU - Introduction - Day 1 (2026 - 4 - 30)
+OSSU - Lecture 1: Introduction to Computer Science
 
- What is OSSU?
-OSSU (Open Source Society University) is a free, self-learning curriculum for studying Computer Science using online courses.
+## What this lecture is about
+This lecture introduces Computer Science basics,Programming using Python,How computers can solve real-world problems.
 
+Even though I am an ITPEC student who have basic knowledge ,i would still learn from it to make my knowledge and understand of basics to be strong.
 
-My Goal
-- Become a software developer
-- Build real projects
-- Improve problem-solving skills
+---
 
-What is Computer Science?
-Computer Science is the study of how to solve problems using computers.
+## What is Computation?
+Computation = solving problems using a computer.
 
-It includes:
-- Algorithms (step-by-step solutions)
-- Data Structures (how data is organized)
-- Programming (writing code)
-- Understanding how computers work
+A computer:
+- Takes input
+- Processes it
+- Produces output
 
-Programming is just one part of Computer Science.
+Example:
+Input → numbers  
+Process → calculate  
+Output → result  
 
- What I Learned from this Lecture
-- OSSU provides a structured path to learn CS
-- Learning requires consistency and patience
-- Just watching lectures is not enough
-- Practice and projects are necessary
+---
 
+Types of Knowledge in Programming
 
-My Action Plan
-- Write notes after every lecture
-- Build at least one small project per topic
-- Upload everything to GitHub
-- Practice coding daily
+### 1. Declarative Knowledge (WHAT)
+- Describes what something is
+- Example: “What is a square root?”
 
+### 2. Imperative Knowledge (HOW)
+- Steps to solve a problem
+- Example: algorithm or program
 
+👉 Programming mainly uses **imperative knowledge**
+
+---
+
+## What is an Algorithm?
+An algorithm is a step-by-step procedure to solve a problem
+
+Properties are Finite (must end),Clear steps,Can be executed.
+
+---
+
+# Stored Program Computer
+Modern computers:
+- Store both data and instructions in memory
+- Execute instructions step-by-step
+
+---
+
+# Basic Machine Model
+A computer has:
+- Memory (stores data)
+- Control Unit (runs instructions)
+- Arithmetic Logic Unit (does calculations)
+
+---
+
+# What I Learned
+- Computer Science is about solving problems
+- Algorithms are very important
+- Programming is just a tool, not the goal
+- Computers follow exact instructions
+
+---
+
+## 🪞 Reflection (write yourself)
+- What was easy: still i know some of the basic so this is still easy for me
+- What was confusing: nothing confusing yet 
+- What will I do next: I will go to lecture 2 nexttime.
