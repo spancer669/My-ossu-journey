@@ -50,8 +50,9 @@ in this OSSU curriculam i have to start with python so i think basic can be a li
 I write notes for each lecture:
 
 - Introduction → `notes/introduction.md`
-- Lecture 2 → `notes/lecture-2.md`
-- Lecture 3 → `notes/lecture-3.md`
+- Lecture 2 → `notes/lecture-2 Day 2.md`
+- Lecture 3 → `notes/lecture-3 Day 3.md`
+- Lecture 4 → `notes/lecture-4 Day 4.md`
 
 ---
 
